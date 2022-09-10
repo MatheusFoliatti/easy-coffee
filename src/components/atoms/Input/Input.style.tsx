@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
-const Container = styled.input`
-background-color: black;
-color: white;
+const Input = styled.input`
+background-color: #888;
+color: darkblue;
+width: 10%;
+border-radius: 20px;
 `
 
-export default Container
+export default Input
