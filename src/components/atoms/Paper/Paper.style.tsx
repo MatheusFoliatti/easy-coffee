@@ -1,10 +1,7 @@
 import styled from 'styled-components'
 
 const Paper = styled.div`
-flex: 1;
-background: red;
-align-items: center;
-justify-content: center;
+background: green;
 `
 
 export default Paper

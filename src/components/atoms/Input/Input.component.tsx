@@ -5,5 +5,4 @@ const InputComponent = () => (
   <Input/ >
 )
 
-
 export default InputComponent

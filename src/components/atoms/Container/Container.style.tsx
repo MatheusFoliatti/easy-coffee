@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 
+interface ContainerInterface {
+  fullHeight?: boolean
+  fullCentered?: boolean
+}
+
 const Container = styled.div`
-flex: 1;
-align-items: center;
-justify-content: center;
+display: flex;
+height: ${({fullHeight}: ContainerInterface) => (fullHeight ? '100vh': 'auto')};
+justify-content: ${({fullCentered}: ContainerInterface) => (!fullCentered ? 'initial': 'center')};
+align-items: ${({fullCentered}: ContainerInterface) => (!fullCentered ? 'initial': 'center')};
 `
 
 export default Container
