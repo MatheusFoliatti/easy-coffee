@@ -5,14 +5,18 @@ import {
   Route,
 } from 'react-router-dom'
 
-import Home from './pages/Home/Home.components'
+import {UserProvider} from './context/User'
 
-const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
-  </BrowserRouter>
+import Home from './pages/Home'
+
+const App = () =>  (
+  <UserProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  </UserProvider>
 )
 
 export default App
