@@ -3,9 +3,11 @@ import Paper from './Paper.style'
 
 type PaperComponentInterface = {
   children?: JSX.Element | JSX.Element[]
-}
+};
 
-const PaperComponent: React.FC<PaperComponentInterface> = ({
+const PaperComponent: React.FC<
+  PaperComponentInterface
+> = ({
   children,
 }) => (
   <Paper>
