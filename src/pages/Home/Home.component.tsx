@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import toastfy from '../../components/atoms/Toast'
 
 import * as UserService from '../../services/Users'
 
@@ -45,7 +48,14 @@ const Home = () => {
           onClick={() => handleSubmit(cpf)}
         >
           Entrar
-        </Button>
+        </Button>          
+        <ToastContainer />
+        <button
+          type='button'
+          onClick={toastfy}
+        >
+          Teste
+        </button>
       </Paper>
     </Container>
   )}
