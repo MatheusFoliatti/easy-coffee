@@ -29,7 +29,7 @@ const ProductCardComponent: React.FC<
     )
   </ProductCard>
   
-  //
+  //Não havia entendido muito bem, mas criei os parametro.
 
 )
 
