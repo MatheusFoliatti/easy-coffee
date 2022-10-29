@@ -1,36 +1,33 @@
 import React from 'react'
 import Button from '../Button'
+import Typography from '../Typography'
 import ProductCard from './ProductCard.style'
+import Image from '../Image'
 
 type ProductCardComponentInterface = {
-  children?: string,
-  imgUrl?: string,
-  title?: string,
-  description?: string,
-  buttonText?: string,
-  price?: number,
+  imgUrl: string
+  title: string
+  description: string
+  buttonText: string
+  price: number
   handleSubmit: () => void
 };
 
 const ProductCardComponent: React.FC<
   ProductCardComponentInterface
 > = ({
-  children, imgUrl, title, description, buttonText, price, handleSubmit 
+  imgUrl, title, description, buttonText, price, handleSubmit 
 }) => (
   <ProductCard>
-    { children }
-    { imgUrl }
-    { title }
-    { description }
-    { buttonText }
-    { price }
-    return(
+    <Image source= { imgUrl } />
+    <Typography as = 'h2'> { title } </Typography> 
+    <Typography as = 'p'> { description } </Typography>
+    <Typography as = 'p'> { buttonText } </Typography>
+    <Typography as = 'p'> { price } </Typography> 
     <Button onClick={() => handleSubmit ()}/>
-    )
+
   </ProductCard>
   
-  //Não havia entendido muito bem, mas criei os parametro.
-
 )
 
 export default ProductCardComponent

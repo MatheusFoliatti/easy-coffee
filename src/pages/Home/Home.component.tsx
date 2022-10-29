@@ -1,8 +1,5 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import toastfy from '../../components/atoms/Toast'
 
 import * as UserService from '../../services/Users'
 
@@ -17,19 +14,18 @@ const Home = () => {
   const {dispatch} = useUser()
   const [cpf, setCpf] = useState<string>('')
   const navigate = useNavigate()
-  
+
   const handleSubmit = (cpf: string) => {
     UserService.getByCpf(cpf)
       .then((response) => {
-        console.log(response)
         dispatch({
           type: 'ADD_USER',
-          payload: response,
+          payload: response
         })
       })
       .then(() => navigate('/produtos'))
   }
-  
+
   return (
     <Container 
       fullHeight
@@ -48,14 +44,7 @@ const Home = () => {
           onClick={() => handleSubmit(cpf)}
         >
           Entrar
-        </Button>          
-        <ToastContainer />
-        <button
-          type='button'
-          onClick={toastfy}
-        >
-          Teste
-        </button>
+        </Button>
       </Paper>
     </Container>
   )}
