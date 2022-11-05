@@ -1,8 +1,8 @@
 import React from 'react'
-import Button from '../Button'
-import Typography from '../Typography'
+import Button from '../../atoms/Button'
+import Typography from '../../atoms/Typography'
 import ProductCard from './ProductCard.style'
-import Image from '../Image'
+import Image from '../../atoms/Image'
 
 type ProductCardComponentInterface = {
   imgUrl: string
