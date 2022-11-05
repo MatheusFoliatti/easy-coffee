@@ -3,11 +3,15 @@ import Container from '../../atoms/Container'
 //import FilterBox from '../../molecules/FilterBox'
 
 type QueryTemplateComponentInterface = {
-  children?: JSX.Element | JSX.Element[]
+  listingcomponent?: JSX.Element | JSX.Element[]
+  // filtercomponent?: string
 }
 
-const QueryTemplateComponent: React.FC<QueryTemplateComponentInterface> = ({ children }) => (
-  <Container>{children}</Container>
+const QueryTemplateComponent: 
+React.FC<QueryTemplateComponentInterface> = ({ listingcomponent } //, filtercomponent 
+) => (
+  //<FilterBox>{filtercomponent}</FilterBox>
+  <Container>{listingcomponent}</Container> 
 )
 
 export default QueryTemplateComponent
